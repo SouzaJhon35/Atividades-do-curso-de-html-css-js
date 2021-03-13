@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tudo sobre google glass</title>
+
+   <link rel="stylesheet" type="text/css" href= "../_css/estilo.css "/>    
+   <link rel="stylesheet" type="text/css" href= "../_css/form.css "/>    
+</head>
+<script
+   language ="javaScript" src = "../_javascript/funcoes.js">
+</script>
+<script>
+    function calc_total(){
+    var qtd = document.getElementById('cQtt').value;
+    tot = qtd *1500;
+    document.getElementById ('cPagar').value=tot;
+}
+    </script>
+<body>
+    <div id = "interface">
+    <header id = "cabecalho">
+        <hgroup>
+        <h1>Google Glass</h1>
+        <h2>A revolução do Google está chegando</h2>
+    </hgroup>
+  <img id="icone" src = "../_imagens/contato.png">
+</header>
+<nav id="menu">
+        <h1>Menu Principal</h1>
+<ul>
+    <li onmouseover="mudaFoto ('../_imagens/home.png')" 
+    onmouseout="mudaFoto('../_imagens/contato.png')"><a href="../_textos/index-txt.html">Home</a></li>
+    <li onmouseover="mudaFoto ('../_imagens/especificacoes.png')" 
+    onmouseout="mudaFoto('../_imagens/contato.png')"><a href="../_textos/specs-txt.html">Especificações</a></li>
+    <li onmouseover="mudaFoto ('../_imagens/fotos.png')" 
+    onmouseout="mudaFoto('../_imagens/contato.png')"><a href="../_textos/fotos-txt.html">Fotos</a></li>
+    <li onmouseover="mudaFoto ('../_imagens/multimidia.png')" 
+    onmouseout="mudaFoto('../_imagens/contato.png')"><a href="../_textos/multimidia-txt.html">Multimídia</a></li>
+    <li onmouseover="mudaFoto ('../_imagens/contato.png')" 
+    onmouseout="mudaFoto('../_imagens/contato.png')"><a href="../_textos/fale-conosco-txt.html">Fale conosco</a></li>
+</ul>
+</nav>
+    </header>
+<section id="corpo">
+<article id="noticiaprincipal">
+    <header id="cabecalhoartigo">
+</hgroup>    
+    <h3 > Fale Conosco > Contato</h3>
+    <h1>Formulário de Contato</h1>
+    <h2>por Gustavo Guanabara</h2>
+    <h3 class="direita">Atualizado em 01/Maio/2013</h3>
+</hgroup>  </header>
+
+
+<form method="post" id="fContato" action="mailto:paulokoerch2014@outlook.com" oninput="calc_total();">
+    <fieldset>
+    <legend id="usuario">Identificação do Usuário</legend>
+    <p><label for="cNome">Nome</label><input type="text" nome="tNome" id="cNome" size="20" maxlength="30" placeholder="Nome completo" /></p>
+    <p>Senha:<input type="tex" nome="tSenha" id="cSenha" size="8" maxlength="8" placeholder="8 dig"/></p>
+    <p>E-mail:<input type="tex" nome="tEmail" id="cEmail" size="40" maxlength="40" placeholder="username@gmail.com"/></p>
+    <fieldset id="sexo"><legend>Sexo</legend>
+        <input type="radio" name="sexo" id="cMasc"/> <label for="cMasc"> Masculino</label>
+        <input type="radio" name="sexo" id="cFem"/> <label for="cFem">Feminino</label> 
+    </fieldset>
+<p> Data de Nascimento:<br/><input type="date" nome="tData" id="cData"/></p>
+</fieldset>
+<fieldset>
+ <legend id="endereco">  Endereço do Usuário</legend> 
+   <p>Logradouro <input type="text" name="tRua" id="cRua" size="13" maxlength="80" placeholder="Rua, av. trav"></p>
+   <p> Número:<input type="number" name="tNumero" id="cNumero" min="0" max="99999" placeholder="000" ></p>
+   <p>Estado:<select name="sEst" id="cEst">
+       <option>RJ</option>
+       <option>SP</option>
+       <option>SC</option>
+   </select> </p>
+   <p>Cidade:<input type="tex" nome="tCidade" id="cCidade" size="15" maxlength="15" placeholder="Sua Cidade"/></p>
+</fieldset>
+<fieldset>
+    <legend id="mensagem"> Mensagem do Usuário</legend>
+    <p>Grau de Urgência:<p></p> Min<input type="range" name="tUrg" id="cUrg" min="0" max="10"/>Máx </p>
+   <p> Mensagem:<textarea name="tMsg" id="cMsg" cols="45" rows="5" placeholder="Digite aqui sua mensagem"> </textarea></p>
+</fieldset>
+<fieldset>
+    <legend id="pedido"> um Google Glass</legend>
+   <p>  Goostaria de adquirir um Google Glass quando disponível<input type="checkbox" name="tped" id="cPed" checked /></p>
+   <p> Cor:<input type="color" name="tCor" id="cCor" value="blue" "/></p>
+    <p>Quantidade:<input type="number" name="tQtt" id="cQtt" min="1" max="99999" placeholder="00" ></p>
+   <P> Preço Total: R$<input type="text" name="tPagar" id="cPagar" size="13" maxlength="80" placeholder="Total a pagar" readonly></P>
+</fieldset>
+<fieldset>
+<input type="submit" value="ENVIAR"/>
+</fieldset>
+</form>
+<footer id="rodape">   
+    <p>Copyright 2013 - by Gustavo Guanabara<br></p>
+    <p> <a href="http://facebook.com/CursosEmVideo" target="blank"> Facebook </a>|
+        <a href="http://twitter.com/cursoemvideo" target="blank" > Twitter</a></p>
+</footer>
